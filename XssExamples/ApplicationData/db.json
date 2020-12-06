@@ -1,10 +1,14 @@
 [
-    {
-        "PostName": "piew",
-        "PostContent": "Dit is mijn eerste post en ik ben er heel blij mee :P"
-    },
-    {
-        "PostName": "Henk",
-        "PostContent": "Nu kunnen we gewoon weer posten"
-    }
+  {
+    "PostName": "piew",
+    "PostContent": "Dit is mijn eerste post en ik ben er heel blij mee :P"
+  },
+  {
+    "PostName": "Henk",
+    "PostContent": "Nu kunnen we gewoon weer posten"
+  },
+  {
+    "PostName": "bold text",
+    "PostContent": "<b>Bold text</b>"
+  }
 ]
