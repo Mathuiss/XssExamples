@@ -1,0 +1,28 @@
+﻿@page
+@model MyApp.Namespace.ReflectedModel
+@{
+}
+
+@section head
+{
+    <link rel="stylesheet" href="/css/reflected.css">
+}
+
+<h1>Welcome to picture search.</h1>
+
+<form method="get">
+    <p>Search Query:</p>
+    <input type="text" id="sb" name="query">
+    <input type="submit">
+</form>
+
+@if (Model.PictureUrl != null)
+{
+    <div class="results" id="r">
+        <h3>Searching for: @Model.Query</h3>
+        <p>Download Link:</p>
+        <code>@Model.PictureUrl</code>
+        <hr>
+        <img src="@Model.PictureUrl" alt="https://assets.prestashop2.com/sites/default/files/styles/blog_750x320/public/blog/2019/10/banner_error_404_2.jpg?itok=rbHvMlXK">
+    </div>
+}

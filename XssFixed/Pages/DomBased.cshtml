@@ -1,0 +1,19 @@
+﻿@page
+@model MyApp.Namespace.DomBasedModel
+@{
+}
+
+@section head
+{
+    <link rel="stylesheet" href="/css/stored.css">
+}
+
+<h1>Welcome to Generic Image Board!</h1>
+
+<b align="center">Result of the calculation: <div id="result">Fail</div></b>
+
+
+<script>
+    var num = document.URL.split("num=") [1];
+    document.getElementById("result").innerHTML = eval(num);
+</script>

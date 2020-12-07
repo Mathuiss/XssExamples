@@ -1,0 +1,29 @@
+﻿@page
+@using Models
+@model XssExamples.Pages.StoredModel
+@{
+}
+
+@section head
+{
+    <link rel="stylesheet" href="/css/stored.css">
+}
+
+<h1>Welcome to Generic Image Board!</h1>
+
+<form method="post">
+    <ul>
+        <li><span>Name of your post:</span></li>
+        <li><input type="text" name="FormName"></li>
+        <li><span>Content:</span></li>
+        <li><textarea cols="50" rows="5" name="FormContent"></textarea></li>
+        <li><input type="submit"></li>
+    </ul>
+</form>
+
+@foreach (PostModel post in @Model.Posts)
+{
+    <hr />
+    <h3>@post.PostName</h3>
+    <p>@post.PostContent</p>
+}
