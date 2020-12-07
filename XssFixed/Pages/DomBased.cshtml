@@ -10,10 +10,11 @@
 
 <h1>Welcome to Generic Image Board!</h1>
 
-<b align="center">Result of the calculation: <div id="result">Fail</div></b>
-
+<b align="center">Result of the calculation:</b>
+<div id="result">Fail</div>
 
 <script>
     var num = document.URL.split("num=") [1];
-    document.getElementById("result").innerHTML = eval(num);
+    var sanitizedInput = num.replace(/[^-()\d/*+.]/g, '');
+    document.getElementById("result").textContent = eval(sanitizedInput);
 </script>
